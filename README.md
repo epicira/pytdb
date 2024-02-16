@@ -10,6 +10,11 @@ This library depends on PyIraCluster, which is to be installed separately.
 - Reduces the parameters to be given as input for TDB functions which reduces the typo errors.
 - Easy to get started as most of the configuration is optional by default.
 
+### Install
+
+```
+pip install git+https://github.com/epicira/pytdb.git
+```
 
 ### Usage
 
