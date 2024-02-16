@@ -1,5 +1,5 @@
 # TDB
-Python interface for Transient Database (TDB) which is part of IraCluster.
+Python wrapper for Transient Database (TDB) which is part of IraCluster.
 
 ### Requirements
 This library depends on PyIraCluster, which is to be installed separately.
@@ -15,7 +15,7 @@ This library depends on PyIraCluster, which is to be installed separately.
 
 ```py
 import PyIraCluster # the C++ python library import
-from tdb.tdb import TDB # the Python wrapper for TDB functions in PyIraCluster
+from pytdb.tdb import TDB # the Python wrapper for TDB functions in PyIraCluster
 
 
 def on_message(msg: any):

@@ -42,7 +42,7 @@ class TDB():
         You cannot set callback for this function.
         execute_after accepts integer (in milliseconds)
         """
-        TdbExecAsync(
+        return TdbExecAsync(
             self.cluster_id, self.database_name, query, 
             self.publish_changes if publish_changes is None else publish_changes,
             execute_after
