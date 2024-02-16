@@ -48,13 +48,13 @@ def main():
         """
     )
 
-    status = tdb.execute('INSERT INTO my_table_1 (a, b) VALUES (1, "hello");')
+    status = sample_db.execute('INSERT INTO my_table_1 (a, b) VALUES (1, "hello");')
     if status == "OK":
         print("success")
-    _ = tdb.execute('INSERT INTO my_table_2 (m, n) VALUES ("hello", "world");')
+    _ = sample_db.execute('INSERT INTO my_table_2 (m, n) VALUES ("hello", "world");')
     
-    my_table_1_count: int = tdb.count("my_table_1")
-    my_table_2_count: int = tdb.count("my_table_2", where_clause='m="hello" AND n="world"')
+    my_table_1_count: int = sample_db.count("my_table_1")
+    my_table_2_count: int = sample_db.count("my_table_2", where_clause='m="hello" AND n="world"')
 ```
 
 ### API
