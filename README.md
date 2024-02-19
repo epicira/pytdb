@@ -12,6 +12,10 @@ This library depends on PyIraCluster, which is to be installed separately.
 
 ### Install
 
+```bash
+apt install git # For Debian
+pip install wheel
+```
 ```
 pip install git+https://github.com/epicira/pytdb.git
 ```
