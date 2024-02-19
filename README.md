@@ -37,7 +37,7 @@ def main():
 
     # The below function is used to initialise IraCluster 
     # PyIraCluster.Cluster(your_application_name: str, cluster_id: str, callback: Callable)
-    PyIraCluster.Cluster(app_name, cluster_id, on_message)
+    _ = PyIraCluster.Cluster(app_name, cluster_id, on_message)
     tdb = TDB(cluster_id=cluster_id)
     sample_db = tdb.open(
         database_name="sample_db",
