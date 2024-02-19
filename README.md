@@ -37,7 +37,7 @@ def main():
 
     # The below function is used to initialise IraCluster 
     # PyIraCluster.Cluster(your_application_name: str, cluster_id: str, callback: Callable)
-    _ = PyIraCluster.Cluster(app_name, cluster_id, on_message)
+    cluster = PyIraCluster.Cluster(app_name, cluster_id, on_message)
     tdb = TDB(cluster_id=cluster_id)
     sample_db = tdb.open(
         database_name="sample_db",
@@ -60,10 +60,17 @@ def main():
     status = sample_db.execute('INSERT INTO my_table_1 (a, b) VALUES (1, "hello");')
     if status == "OK":
         print("success")
-    _ = sample_db.execute('INSERT INTO my_table_2 (m, n) VALUES ("hello", "world");')
+    print(sample_db.execute('INSERT INTO my_table_2 (m, n) VALUES ("hello", "world");'))
     
     my_table_1_count: int = sample_db.count("my_table_1")
     my_table_2_count: int = sample_db.count("my_table_2", where_clause='m="hello" AND n="world"')
+
+    print(my_table_1_count)
+    print(my_table_2_count)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 ### API
